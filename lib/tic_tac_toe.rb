@@ -116,4 +116,17 @@ class TicTacToe
       return false
     end
   end
+  
+  def winner
+    if won?
+      win = won?
+      if win.all?{|player| @board[player] == "X"}
+        return "X"
+      else
+        return "O"
+      end
+    else
+      return nil
+    end
+  end
 end
