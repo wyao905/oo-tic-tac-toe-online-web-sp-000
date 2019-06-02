@@ -1,6 +1,7 @@
 class TicTacToe
   def initialize
     @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    @token
   end
   
   WIN_COMBINATIONS = [
@@ -20,8 +21,7 @@ class TicTacToe
   end
   
   def input_to_index
-    index = user_input.to_i - 1
-    return index
+    @index = gets.to_i - 1
   end
   
   def move(index, token = "X")
