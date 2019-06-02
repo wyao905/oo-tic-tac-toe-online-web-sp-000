@@ -92,4 +92,12 @@ class TicTacToe
     end
     return false
   end
+  
+  def full?
+    if @board.any?{|i| i == " " || i == nil}
+      return false
+    else
+      return true
+    end
+  end
 end
